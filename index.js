@@ -1,112 +1,246 @@
-const standardizeInput = function(collection){
+// const standardizeInput = function(collection){
+//     return (collection instanceof Array) ? collection.slice() : Object.values(collection);
+// }
+// const myEach = function(collection, callback){
+//     const newCollection = standardizeInput(collection);
+
+//     for(let idx = 0; idx < newCollection.length; idx++){
+//         callback(newCollection[idx]);
+//     }
+//     return newCollection;
+// }
+// const myMap = function(collection, callback){
+//     const newCollection = standardizeInput(collection);
+
+//     const newArr = [];
+// for( let idx = 0; idx < newCollection.length; idx++){
+//     newArr.push(callback(newCollection[idx]));
+// }
+// return newArr;
+// }
+// const myReduce = function(collection, callback, acc){
+//     let newCollection = standardizeInput(collection);
+//     if(!acc){
+//         acc = newCollection[0];
+//         newCollection = newCollection.slice(1);
+//     }
+//     const len = newCollection.length;
+//     for(let i = 0; i < len; i++){
+//         acc = callback(acc, newCollection[1], newCollection);
+//     }
+//     return acc;
+// }
+
+// const myFind = function(collection, predicate){
+//     const newCollection = standardizeInput(collection);
+
+//     for(let idx = 0; idx < newCollection.length; idx++){
+//         if(predicate(newCollection[idx])) return newCollection[idx];
+
+//     }
+//     return undefined;
+// }
+// const myFilter = function(collection, predicate){
+//     const newCollection = standardizeInput(collection);
+
+//     const newArr = [];
+
+//     for(let idx = 0; idx < newCollection.length; idx++){
+//         if(predicate(newCollection[idx])) newArr.push(newCollection[idx]);
+
+//     }
+//     return newArr;
+// }
+// const mysize = function(collection){
+//     const newCollection = standardizeInput(collection);
+//     return newCollection.length;
+
+// }
+// const myFirst = function(arr, stop =false){
+//     return (stop) ? arr.slice(0, stop) : arr[0];
+// }
+// const myLast = function(arr, start = false){
+//     return (start) ? arr.slice(arr.length-start, arr.length) : arr[arr.length -1];
+// }
+// const mySortBy = function(arr, callback){
+//     const newArr =[...arr];
+//     return newArr.sort(function(a,b){
+//         if(callback(a) > callback(b)){
+//             return 1;
+//         } else if(callback(b) > callback(a)){
+//             return -1;
+//         }else{
+//             return 0;
+//         }
+//     });
+// }
+// const unpack = function(receiver, arr){
+//     for(let val of arr){
+//         receiver.push(val);
+//     }
+// }
+
+// const myFlatten = function(collection, shallow, newArr=[]){
+//     if(shallow){
+//         for(let val of collection){
+//             Array.isArray(val) ? unpack(newArr, val) : newArr.push(val);
+//         }
+//     }else{
+//         for(let val of collection){
+//             if(Array.isArray(val)){
+
+//             }else{
+//                 newArr.push(val);
+//             }
+//         }
+//     }
+//     return newArr;
+// }
+// const myKeys = function(obj){
+//     const keys = [];
+//     for(let key in obj){
+//         keys.push(key);
+//     }
+//     return keys;
+// }
+// const myValues = function(obj){
+//     const values = [];
+//     for(let key in obj){
+//         values.push(obj[key])
+//     }
+//     return values;
+// }
+const standardizeInput = function(collection) {
     return (collection instanceof Array) ? collection.slice() : Object.values(collection);
-}
-const myEach = function(collection, callback){
+  }
+  
+  const myEach = function(collection, callback) {
     const newCollection = standardizeInput(collection);
-
-    for(let idx = 0; idx < newCollection.length; idx++){
-        callback(newCollection[idx]);
+  
+    for (let idx = 0; idx < newCollection.length; idx++) {
+      callback(newCollection[idx]);
     }
-    return newCollection;
-}
-const myMap = function(collection, callback){
+  
+    return collection;
+  }
+  
+  const myMap = function(collection, callback) {
     const newCollection = standardizeInput(collection);
-
+  
     const newArr = [];
-for( let idx = 0; idx < newCollection.length; idx++){
-    newArr.push(callback(newCollection[idx]));
-}
-return newArr;
-}
-const myReduce = function(collection, callback, acc){
-    let newCollection = standardizeInput(collection);
-    if(!acc){
-        acc = newCollection[0];
-        newCollection = newCollection.slice(1);
+  
+    for (let idx = 0; idx < newCollection.length; idx++) {
+      newArr.push(callback(newCollection[idx]));
     }
+  
+    return newArr;
+  }
+  
+  const myReduce = function(collection, callback, acc) {
+    let newCollection = standardizeInput(collection);
+  
+    if (!acc) {
+      acc = newCollection[0];
+      newCollection = newCollection.slice(1);
+    }
+  
     const len = newCollection.length;
-    for(let i = 0; i < len; i++){
-        acc = callback(acc, newCollection[1], newCollection);
+  
+    for (let i = 0; i < len; i++) {
+      acc = callback(acc, newCollection[i], newCollection);
     }
     return acc;
-}
-
-const myFind = function(collection, predicate){
+  }
+  
+  const myFind = function(collection, predicate) {
     const newCollection = standardizeInput(collection);
-
-    for(let idx = 0; idx < newCollection.length; idx++){
-        if(predicate(newCollection[idx])) return newCollection[idx];
-
+  
+    for (let idx = 0; idx < newCollection.length; idx++) {
+      if (predicate(newCollection[idx])) return newCollection[idx];
     }
+  
     return undefined;
-}
-const myFilter = function(collection, predicate){
+  }
+  
+  const myFilter = function(collection, predicate) {
     const newCollection = standardizeInput(collection);
-
+  
     const newArr = [];
-
-    for(let idx = 0; idx < newCollection.length; idx++){
-        if(predicate(newCollection[idx])) newArr.push(newCollection[idx]);
-
+  
+    for (let idx = 0; idx < newCollection.length; idx++) {
+      if (predicate(newCollection[idx])) newArr.push(newCollection[idx]);
     }
+  
     return newArr;
-}
-const mysize = function(collection){
+  }
+  
+  const mySize = function(collection) {
     const newCollection = standardizeInput(collection);
     return newCollection.length;
-
-}
-const myFirst = function(arr, stop =false){
+  }
+  
+  // Array Functions
+  
+  const myFirst = function(arr, stop=false) {
     return (stop) ? arr.slice(0, stop) : arr[0];
-}
-const myLast = function(arr, start = false){
-    return (start) ? arr.slice(arr.length-start, arr.length) : arr[arr.length -1];
-}
-const mySortBy = function(arr, callback){
-    const newArr =[...arr];
-    return newArr.sort(function(a,b){
-        if(callback(a) > callback(b)){
-            return 1;
-        } else if(callback(b) > callback(a)){
-            return -1;
-        }else{
-            return 0;
-        }
+  }
+  
+  const myLast = function(arr, start=false) {
+    return (start) ? arr.slice(arr.length-start, arr.length) : arr[arr.length-1];
+  }
+  
+  const mySortBy = function(arr, callback) {
+    const newArr = [...arr];
+    return newArr.sort(function(a, b) {
+      if (callback(a) > callback(b)) {
+        return 1;
+      } else if (callback(b) > callback(a)) {
+        return -1;
+      } else {
+        return 0;
+      }
     });
-}
-const unpack = function(receiver, arr){
-    for(let val of arr){
-        receiver.push(val);
+  }
+  
+  // unpack is a helper function for myFlatten that is used when shallow is true
+  // It takes each element of the input array (whether it's a primitive value or
+  // an array) and pushes it into the output array
+  const unpack = function(receiver, arr) {
+    for (let val of arr) {
+      receiver.push(val);
     }
-}
-
-const myFlatten = function(collection, shallow, newArr=[]){
-    if(shallow){
-        for(let val of collection){
-            Array.isArray(val) ? unpack(newArr, val) : newArr.push(val);
+  }
+  
+  
+  const myFlatten = function(collection, shallow, newArr=[]) {
+    if (shallow) {
+      for (let val of collection) {
+        Array.isArray(val) ? unpack(newArr, val) : newArr.push(val);
+      }
+    } else {
+      // shallow = false (recursive case)
+      for (let val of collection) {
+        if (Array.isArray(val)) {
+         
+        } else {
+          newArr.push(val);
         }
-    }else{
-        for(let val of collection){
-            if(Array.isArray(val)){
-
-            }else{
-                newArr.push(val);
-            }
-        }
+      }
     }
     return newArr;
-}
-const myKeys = function(obj){
+  }
+  const myKeys = function(obj) {
     const keys = [];
-    for(let key in obj){
-        keys.push(key);
+    for (let key in obj){
+      keys.push(key);
     }
     return keys;
-}
-const myValues = function(obj){
+  }
+  
+  const myValues = function(obj) {
     const values = [];
-    for(let key in obj){
-        values.push(obj[key])
+    for (let key in obj){
+      values.push(obj[key]);
     }
     return values;
 }

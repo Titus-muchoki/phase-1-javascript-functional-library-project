@@ -2,12 +2,12 @@
   "stats": {
     "suites": 11,
     "tests": 27,
-    "passes": 23,
+    "passes": 27,
     "pending": 0,
-    "failures": 4,
-    "start": "2023-05-25T10:31:29.143Z",
-    "end": "2023-05-25T10:31:29.635Z",
-    "duration": 492
+    "failures": 0,
+    "start": "2023-05-25T10:32:51.890Z",
+    "end": "2023-05-25T10:32:52.355Z",
+    "duration": 465
   },
   "tests": [
     {
@@ -20,22 +20,16 @@
     {
       "title": "calls alert properly on object values",
       "fullTitle": "index.js myEach calls alert properly on object values",
-      "duration": 2,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "returns the original collection",
       "fullTitle": "index.js myEach returns the original collection",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
-      "err": {
-        "message": "expected false to equal true",
-        "showDiff": true,
-        "actual": "false",
-        "expected": "true",
-        "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (test/indexTest.js:30:37)\n    at processImmediate (internal/timers.js:464:21)"
-      }
+      "err": {}
     },
     {
       "title": "successfully returns a correctly populated array",
@@ -70,13 +64,7 @@
       "fullTitle": "index.js myReduce returns the correct reduced value when passed an initial value",
       "duration": 0,
       "currentRetry": 0,
-      "err": {
-        "message": "expected 34 to equal 40",
-        "showDiff": true,
-        "actual": "34",
-        "expected": "40",
-        "stack": "AssertionError: expected 34 to equal 40\n    at Context.<anonymous> (test/indexTest.js:70:32)\n    at processImmediate (internal/timers.js:464:21)"
-      }
+      "err": {}
     },
     {
       "title": "returns the correct reduced value when not passed an initial value",
@@ -88,7 +76,7 @@
     {
       "title": "does not modify the original array",
       "fullTitle": "index.js myReduce does not modify the original array",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
@@ -109,7 +97,7 @@
     {
       "title": "returns the value if found",
       "fullTitle": "index.js myFind returns the value if found",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -144,22 +132,16 @@
     {
       "title": "correctly returns the size of the collection when an array is passed",
       "fullTitle": "index.js mySize correctly returns the size of the collection when an array is passed",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
-      "err": {
-        "stack": "ReferenceError: mySize is not defined\n    at Context.<anonymous> (test/indexTest.js:147:7)\n    at processImmediate (internal/timers.js:464:21)",
-        "message": "mySize is not defined"
-      }
+      "err": {}
     },
     {
       "title": "correctly returns the size of the collection (amount of keys) when an object is passed",
       "fullTitle": "index.js mySize correctly returns the size of the collection (amount of keys) when an object is passed",
       "duration": 0,
       "currentRetry": 0,
-      "err": {
-        "stack": "ReferenceError: mySize is not defined\n    at Context.<anonymous> (test/indexTest.js:151:7)\n    at processImmediate (internal/timers.js:464:21)",
-        "message": "mySize is not defined"
-      }
+      "err": {}
     },
     {
       "title": "returns the first element of the collection",
@@ -171,35 +153,35 @@
     {
       "title": "returns the first n elements of the collection when the second optional argument (n) is provided",
       "fullTitle": "index.js myFirst returns the first n elements of the collection when the second optional argument (n) is provided",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "returns the last element of the collection",
       "fullTitle": "index.js myLast returns the last element of the collection",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "returns the last n elements of the collection when the second optional argument (n) is provided",
       "fullTitle": "index.js myLast returns the last n elements of the collection when the second optional argument (n) is provided",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "retrieves all the names of the object's own enumerable properties",
       "fullTitle": "index.js myKeys retrieves all the names of the object's own enumerable properties",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "does not modify the original object",
       "fullTitle": "index.js myKeys does not modify the original object",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
@@ -213,60 +195,13 @@
     {
       "title": "does not modify the original object",
       "fullTitle": "index.js myValues does not modify the original object",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     }
   ],
   "pending": [],
-  "failures": [
-    {
-      "title": "returns the original collection",
-      "fullTitle": "index.js myEach returns the original collection",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected false to equal true",
-        "showDiff": true,
-        "actual": "false",
-        "expected": "true",
-        "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (test/indexTest.js:30:37)\n    at processImmediate (internal/timers.js:464:21)"
-      }
-    },
-    {
-      "title": "returns the correct reduced value when passed an initial value",
-      "fullTitle": "index.js myReduce returns the correct reduced value when passed an initial value",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected 34 to equal 40",
-        "showDiff": true,
-        "actual": "34",
-        "expected": "40",
-        "stack": "AssertionError: expected 34 to equal 40\n    at Context.<anonymous> (test/indexTest.js:70:32)\n    at processImmediate (internal/timers.js:464:21)"
-      }
-    },
-    {
-      "title": "correctly returns the size of the collection when an array is passed",
-      "fullTitle": "index.js mySize correctly returns the size of the collection when an array is passed",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {
-        "stack": "ReferenceError: mySize is not defined\n    at Context.<anonymous> (test/indexTest.js:147:7)\n    at processImmediate (internal/timers.js:464:21)",
-        "message": "mySize is not defined"
-      }
-    },
-    {
-      "title": "correctly returns the size of the collection (amount of keys) when an object is passed",
-      "fullTitle": "index.js mySize correctly returns the size of the collection (amount of keys) when an object is passed",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {
-        "stack": "ReferenceError: mySize is not defined\n    at Context.<anonymous> (test/indexTest.js:151:7)\n    at processImmediate (internal/timers.js:464:21)",
-        "message": "mySize is not defined"
-      }
-    }
-  ],
+  "failures": [],
   "passes": [
     {
       "title": "calls alert with each element passed",
@@ -278,7 +213,14 @@
     {
       "title": "calls alert properly on object values",
       "fullTitle": "index.js myEach calls alert properly on object values",
-      "duration": 2,
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "returns the original collection",
+      "fullTitle": "index.js myEach returns the original collection",
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
@@ -311,6 +253,13 @@
       "err": {}
     },
     {
+      "title": "returns the correct reduced value when passed an initial value",
+      "fullTitle": "index.js myReduce returns the correct reduced value when passed an initial value",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
       "title": "returns the correct reduced value when not passed an initial value",
       "fullTitle": "index.js myReduce returns the correct reduced value when not passed an initial value",
       "duration": 0,
@@ -320,7 +269,7 @@
     {
       "title": "does not modify the original array",
       "fullTitle": "index.js myReduce does not modify the original array",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
@@ -341,7 +290,7 @@
     {
       "title": "returns the value if found",
       "fullTitle": "index.js myFind returns the value if found",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -374,6 +323,20 @@
       "err": {}
     },
     {
+      "title": "correctly returns the size of the collection when an array is passed",
+      "fullTitle": "index.js mySize correctly returns the size of the collection when an array is passed",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "correctly returns the size of the collection (amount of keys) when an object is passed",
+      "fullTitle": "index.js mySize correctly returns the size of the collection (amount of keys) when an object is passed",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
       "title": "returns the first element of the collection",
       "fullTitle": "index.js myFirst returns the first element of the collection",
       "duration": 0,
@@ -383,35 +346,35 @@
     {
       "title": "returns the first n elements of the collection when the second optional argument (n) is provided",
       "fullTitle": "index.js myFirst returns the first n elements of the collection when the second optional argument (n) is provided",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "returns the last element of the collection",
       "fullTitle": "index.js myLast returns the last element of the collection",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "returns the last n elements of the collection when the second optional argument (n) is provided",
       "fullTitle": "index.js myLast returns the last n elements of the collection when the second optional argument (n) is provided",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "retrieves all the names of the object's own enumerable properties",
       "fullTitle": "index.js myKeys retrieves all the names of the object's own enumerable properties",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "does not modify the original object",
       "fullTitle": "index.js myKeys does not modify the original object",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
@@ -425,7 +388,7 @@
     {
       "title": "does not modify the original object",
       "fullTitle": "index.js myValues does not modify the original object",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     }
